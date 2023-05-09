@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "BankAccount",
+  "namespace": "com.example.avro",
+  "fields": [
+    {"name": "accountNumber", "type": "string"},
+    {"name": "accountHolder", "type": "string"},
+    {"name": "balance", "type": "double"},
+    {"name": "currency", "type": "string"},
+    {"name": "ownerName", "type": "string"},
+    {"name": "ownerAddress", "type": "string"},
+    {"name": "ownerPhoneNumber", "type": "string"},
+    {"name": "accountType", "type": "string"},
+    {"name": "isOpen", "type": "boolean"},
+    {"name": "lastTransactionDate", "type": ["null", "string"], "default": null}
+  ]
+}
