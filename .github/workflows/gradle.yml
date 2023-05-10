@@ -16,6 +16,10 @@ jobs:
           distribution: 'adopt'
       - name: Build with Gradle
         run: ./gradlew build --scan
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: build/libs
   build-with-setup-java-cache:
     runs-on: ubuntu-latest
     steps:
@@ -28,6 +32,10 @@ jobs:
           cache: gradle
       - name: Build with Gradle
         run: ./gradlew build --scan --no-daemon
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: build/libs
   build-with-gradle-build-action-cache:
     runs-on: ubuntu-latest
     steps:
@@ -40,6 +48,10 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build --scan
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: build/libs
   build-with-upload-artifact:
     runs-on: ubuntu-latest
     steps:
