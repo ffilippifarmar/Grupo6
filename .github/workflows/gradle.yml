@@ -19,7 +19,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Package
-          path: build/libs
+          path: build/tmp/jar
   build-with-setup-java-cache:
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Package
-          path: build/libs
+          path: build/tmp/jar
   build-with-gradle-build-action-cache:
     runs-on: ubuntu-latest
     steps:
@@ -51,7 +51,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Package
-          path: build/libs
+          path: build/tmp/jar
   build-with-upload-artifact:
     runs-on: ubuntu-latest
     steps:
