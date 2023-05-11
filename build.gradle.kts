@@ -13,7 +13,7 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 application {
-    mainClassName = "com.example.kafkabackend"
+    mainClassName = "com.example.kafkabackend.KafkaBackendApplicationKt"
 }
 repositories {
     mavenCentral()
